@@ -58,8 +58,9 @@ public final class QueryUtils {
                 double magnitude = properties.getDouble("mag");
                 String location = properties.getString("place");
                 Long date = properties.getLong("time");
-
-                Earthquake earthquake = new Earthquake(magnitude, location, date);
+                // 提取名为 "url" 的键的值
+                String url = properties.getString("url");
+                Earthquake earthquake = new Earthquake(magnitude, location, date, url);
 
                 earthquakes.add(earthquake);
 
