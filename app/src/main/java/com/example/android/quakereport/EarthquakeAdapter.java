@@ -15,10 +15,10 @@ import java.util.Date;
 import android.graphics.drawable.GradientDrawable;
 import android.support.v4.content.ContextCompat;
 
-public class EarthquakeListAdapter extends ArrayAdapter<Earthquake> {
+public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
     private static final String LOCATION_SEPARATOR = " of ";
 
-    public EarthquakeListAdapter(Context context, ArrayList<Earthquake> earthquakes){
+    public EarthquakeAdapter(Context context, ArrayList<Earthquake> earthquakes){
         super(context, 0, earthquakes);
     }
 
