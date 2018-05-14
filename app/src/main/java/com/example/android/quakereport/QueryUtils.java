@@ -177,6 +177,7 @@ public final class QueryUtils {
         // 创建一个可以添加地震的空 ArrayList
         List<Earthquake> earthquakes = new ArrayList<>();
 
+
         // 尝试解析 JSON 响应字符串。如果格式化 JSON 的方式存在问题，
         // 则将抛出 JSONException 异常对象。
         // 捕获该异常以便应用不会崩溃，并将错误消息打印到日志中。
@@ -235,6 +236,12 @@ public final class QueryUtils {
      * 查询 USGS 数据集并返回 {@link Earthquake} 对象的列表。
      */
     public static List<Earthquake> fetchEarthquakeData(String requestUrl) {
+
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         // 创建 URL 对象
         URL url = createUrl(requestUrl);
 
